@@ -24,9 +24,15 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-    @apply font-semibold
+}
+body{
+  @apply font-semibold
 }
 
 h1 {
   @apply font-bold
+}
+
+.max-w-custom {
+  max-width: 9rem;
 }
