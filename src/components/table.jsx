@@ -19,11 +19,20 @@ const Table = () => {
               {t.task}
             </td>
             <td>{t.priority}</td>
-            <td
-              className="cursor-pointer"
-            >
-              <span onClick={() => removeFromTask(t)} className="hover:text-red-500 active:text-red-500">Eliminar</span> | 
-              <span onClick={()=> setTaskUpdate(t)} className="hover:text-green-500 active:text-green-500">Editar</span>
+            <td className="cursor-pointer">
+              <span
+                onClick={() => removeFromTask(t)}
+                className="hover:text-red-500 active:text-red-500"
+              >
+                Eliminar
+              </span>{" "}
+              |
+              <span
+                onClick={() => setTaskUpdate(t)}
+                className="hover:text-green-500 active:text-green-500"
+              >
+                Editar
+              </span>
             </td>
           </tr>
         ))}
