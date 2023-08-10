@@ -29,13 +29,13 @@ const UPDATE_STATE_BY_ACTION = {
   },
   [TASK_ACTION_TYPES.REMOVE_FROM_TASK]: (state, action) => {
     const { id } = action.payload;
+    console.log(id);
     const newState = state.filter((item) => item.id !== id);
     updateLocalStorage(newState);
     return newState;
   },
   [TASK_ACTION_TYPES.UPDATE_TASK]: (state, action) => {
     const { id } = action.payload;
-    console.log(action.payload);
     const taskIndex = state.findIndex((item) => item.id === id);
     if (taskIndex >= 0) {
       const newState = [

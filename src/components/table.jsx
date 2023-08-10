@@ -1,5 +1,5 @@
 import { useTask } from "@/hook/useTask";
-import React, { useState } from "react";
+import React from "react";
 
 const Table = () => {
   const { task, removeFromTask, setTaskUpdate } = useTask();
@@ -22,7 +22,7 @@ const Table = () => {
             <td
               className="cursor-pointer"
             >
-              <span onClick={() => removeFromTask(t)} className="hover:text-red-500 active:text-red-500">Eliminar </span> |
+              <span onClick={() => removeFromTask(t)} className="hover:text-red-500 active:text-red-500">Eliminar</span> | 
               <span onClick={()=> setTaskUpdate(t)} className="hover:text-green-500 active:text-green-500">Editar</span>
             </td>
           </tr>

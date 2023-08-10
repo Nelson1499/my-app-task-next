@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useReducer, createContext, useState, useEffect } from "react";
 import { taskInitialState, taskReducer } from "@/reducer/Task";
 
@@ -24,17 +24,17 @@ const useTaskReducer = () => {
 };
 
 export const TaskProvider = ({ children }) => {
+  const [taskUpdate, setTaskUpdate] = useState();
   const initialValues = {
-    id: "",
+    id:  "",
     task: "",
-    priority: ""
-  }
-  const [taskUpdate, setTaskUpdate] = useState(initialValues);
+    priority:  "Medio",
+  };
   const [task, setTask] = useState([]);
   const { state, addToTask, removeFromTask, updateTask } = useTaskReducer();
   useEffect(() => {
-    setTask(state)
-  }, [state]);
+    setTask(state);
+  }, [state, taskUpdate ]);
   return (
     <TaskContext.Provider
       value={{
@@ -44,7 +44,7 @@ export const TaskProvider = ({ children }) => {
         updateTask,
         setTaskUpdate,
         taskUpdate,
-        initialValues
+        initialValues,
       }}
     >
       {children}
