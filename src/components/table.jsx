@@ -25,8 +25,8 @@ const Table = () => {
                 className="hover:text-red-500 active:text-red-500"
               >
                 Eliminar
-              </span>{" "}
-              |
+              </span>
+              {" | "}
               <span
                 onClick={() => setTaskUpdate(t)}
                 className="hover:text-green-500 active:text-green-500"
