@@ -2,7 +2,7 @@ import { useTask } from "@/hook/useTask";
 import React from "react";
 
 const Table = () => {
-  const { task, removeFromTask, setTaskUpdate } = useTask();
+  const { task, removeFromTask, setTaskUpdate, initialValues } = useTask();
   return (
     <table className="min-w-full px-2 text-center">
       <thead className="mx-2">
@@ -21,7 +21,10 @@ const Table = () => {
             <td>{t.priority}</td>
             <td className="cursor-pointer">
               <span
-                onClick={() => removeFromTask(t)}
+                onClick={() => {
+                  setTaskUpdate(initialValues)
+                  removeFromTask(t)
+                  }}
                 className="hover:text-red-500 active:text-red-500"
               >
                 Eliminar

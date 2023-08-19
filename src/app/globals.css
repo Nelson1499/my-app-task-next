@@ -17,8 +17,9 @@
 }
 
 body {
-  @apply font-semibold text-base scroll-smooth bg-black text-white
+  @apply font-semibold text-base scroll-smooth bg-black text-white overflow-y-scroll
 }
+
 
 h1 {
   @apply font-bold
